@@ -24,11 +24,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: api-gateway-client
+  name: spring-boot
 spec:
   type: LoadBalancer
   selector:
-    app: api-gateway-client
+    app: spring-boot
   ports:
     - port: 8090
       targetPort: 30022
