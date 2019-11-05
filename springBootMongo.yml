@@ -18,6 +18,6 @@ spec:
         - name: spring-boot
           image: kartikrj/spring-boot-mongo
           ports:
-            - containerPort: 8100
+            - containerPort: 8090
 
 
