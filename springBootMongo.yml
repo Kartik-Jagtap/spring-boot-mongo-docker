@@ -1,16 +1,18 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
     name: springboot
-  name: spring-controller
+  app: spring
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: spring
   template:
     metadata:
       labels:
-        name: springboot
+        app: spring
     spec:
       containers:
       - image: kartikrj/spring-boot-mongo
