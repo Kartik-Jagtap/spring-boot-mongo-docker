@@ -1,24 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: spring-boot
   labels:
-    name: springboot
-  app: spring
+    app: spring-boot
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: spring
-  template:
-    metadata:
-      labels:
-        app: spring
+      app: spring-boot
+  template: 
+    metadata: 
+      labels: 
+        app: spring-boot 
     spec:
       containers:
-      - image: kartikrj/spring-boot-mongo
-        name: springboot
-        ports:
-        - name: springboot
-          containerPort: 8080      
+        - name: spring-boot
+          image: kartikrj/spring-boot-mongo
+          ports:
+            - containerPort: 8100
 
 
